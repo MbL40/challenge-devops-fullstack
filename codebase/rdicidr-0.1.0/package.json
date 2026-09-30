@@ -6,10 +6,10 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.3",
+    "prettier": "3.3.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "prettier": "3.3.1",
-    "react-scripts": "4.0.3",
+    "react-scripts": "5.0.1",
     "web-vitals": "^1.1.1"
   },
   "scripts": {
@@ -39,8 +39,8 @@
     ]
   },
   "engines": {
-    "npm": ">=11.x.x <=12.x.x",
+    "npm": "11.x",
     "yarn": ">=1.22.0",
-    "node": ">=24.x.x <=25.x.x"
+    "node": "24.x"
   }
 }
