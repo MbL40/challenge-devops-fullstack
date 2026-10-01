@@ -4,15 +4,21 @@ on:
   push:
     branches:
       - main
-jobs: 
-  hola-mundo:
+jobs:
+  initialize-project:
     runs-on: ubuntu-latest
     steps:
-      - name: saludar
-        run: echo "Hola, mundo!"
-      - name: check node version
-        run: node -v
-      - name: detected folder
-        run: pwd
-      - name: list files
-        run: ls -la
+      - name: checkout code
+        uses: actions/checkout@v7
+      - name: setup node
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: codebase/rdicidr-0.1.0/.nvmrc
+      - name: install dependencies
+        run: npm ci
+      - name: run lint
+        run: npm run lint
+      - name: run unit tests
+        run: CI=true npm run test
+      - name: run build
+        run: npm run build
